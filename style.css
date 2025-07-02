@@ -1,0 +1,111 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    margin: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.hamburger {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Content Sections */
+.content {
+    padding: 60px 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #111;
+}
+
+/* Departments and Gallery Containers */
+.departments, .media-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+}
+
+/* Departments and Gallery Items */
+.department, .media-item {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #c8ebfc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.department:hover, .media-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.department span, .media-item span {
+    position: relative;
+    z-index: 1;
+    color: #080808;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: serif;
+}
+
+.department a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Featured Projects Section */
+.featured-projects {
+    background: #d1fae5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .department, .media-item {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}
